@@ -21,9 +21,5 @@ $("button[name='btn_edit_testcase']").click(function() {
 });
 
 
-$("button[name='btn_new_testcase']").click(function() {
 
-    window.location = "new_testcase";
-
-});
 

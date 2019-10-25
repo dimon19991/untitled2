@@ -1,10 +1,10 @@
-$("button[name='btn_delete_person']").click(function() {
+$("button[name='btn_delete_function']").click(function() {
 
-    var data = { person_login : $(this).data('person_login')}
+    var data = { function_name : $(this).data('function_name')}
 
     $.ajax({
       type: 'POST',
-      url: "/delete_person",
+      url: "/delete_function",
       data: data,
       dataType: "text",
       success: function(resultData) {
@@ -27,3 +27,8 @@ $("button[name='btn_new_person']").click(function() {
 
 });
 
+$("button[name='btn_new_function']").click(function() {
+
+    window.location = "new_function/"+$(this).data('person_login');
+
+});

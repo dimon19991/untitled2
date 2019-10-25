@@ -129,8 +129,8 @@ def function():
     return render_template('function.html', functions = result)
 
 
-@app.route('/new_function', methods=['GET','POST'])
-def new_function():
+@app.route('/new_function/<person_login>', methods=['GET','POST'])
+def new_function(person_login):
 
     form = FunctionForm()
 
@@ -143,7 +143,7 @@ def new_function():
                                 function_name=form.function_name.data,
                                 person_text=form.person_text.data,
                                 counter_of_tests=form.counter_of_tests.data,
-                                person_login_fk=form.person_login_fk.data
+                                person_login_fk=person_login
                             )
 
             db.session.add(new_function)
@@ -152,7 +152,7 @@ def new_function():
 
             return redirect(url_for('function'))
 
-    return render_template('function_form.html', form=form, form_name="New function", action="new_function")
+    return render_template('function_form.html', form=form, form_name="New function", action="new_function/"+person_login)
 
 
 
@@ -164,7 +164,7 @@ def edit_function():
 
     if request.method == 'GET':
 
-        function_name =request.args.get('function_name')
+        function_name = request.args.get('function_name')
         function = db.session.query(ormFunction).filter(ormFunction.function_name == function_name).one()
 
         # fill form and send to user
@@ -219,8 +219,8 @@ def testcase():
     return render_template('testcase.html', testcases = result)
 
 
-@app.route('/new_testcase', methods=['GET','POST'])
-def new_testcase():
+@app.route('/new_testcase/<function_name>', methods=['GET','POST'])
+def new_testcase(function_name):
 
     form = TestCaseForm()
 
@@ -231,7 +231,7 @@ def new_testcase():
         else:
             new_testcase= ormTestCase(
                                 testcase_id=form.testcase_id.data,
-                                function_name_fk=form.function_name_fk.data,
+                                function_name_fk=function_name,
                             )
 
             db.session.add(new_testcase)
@@ -240,7 +240,7 @@ def new_testcase():
 
             return redirect(url_for('testcase'))
 
-    return render_template('testcase_form.html', form=form, form_name="New testcase", action="new_testcase")
+    return render_template('testcase_form.html', form=form, form_name="New testcase", action="new_testcase/"+function_name)
 
 
 

@@ -4,6 +4,7 @@ from wtforms import validators
 
 
 class FunctionForm(Form):
+   # function_name = HiddenField()
 
    function_name = StringField("Name: ",[
                                     validators.DataRequired("Please enter your Login."),
@@ -20,10 +21,12 @@ class FunctionForm(Form):
                                    validators.Length(3, 20, "Name should be from 3 to 20 symbols")
                                ])
 
-   person_login_fk = StringField("Person login: ", [
-                                   validators.DataRequired("Please enter your surname."),
-                                   validators.Length(3, 20, "Name should be from 3 to 20 symbols")
-                               ])
+   # person_login_fk = StringField("Person login: ", [
+   #                                 validators.DataRequired("Please enter your surname."),
+   #                                 validators.Length(3, 20, "Name should be from 3 to 20 symbols")
+   #                             ])
+
+   person_login_fk = HiddenField()
 
    submit = SubmitField("Save")
 

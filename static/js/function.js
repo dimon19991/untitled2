@@ -21,9 +21,9 @@ $("button[name='btn_edit_function']").click(function() {
 });
 
 
-$("button[name='btn_new_function']").click(function() {
+$("button[name='btn_new_testcase']").click(function() {
 
-    window.location = "new_function";
+    window.location = "new_testcase/"+$(this).data('function_name');
 
 });
 
