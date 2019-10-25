@@ -136,49 +136,73 @@ Vadim.Persons_Function.append(mult)
 Yarik.Persons_Function.append(div)
 Srhey.Persons_Function.append(abs)
 
+i_1 = ormTestCase(testcase_id = 1)
+i_2 = ormTestCase(testcase_id = 2)
+i_3 = ormTestCase(testcase_id = 3)
+i_4 = ormTestCase(testcase_id = 4)
+i_5 = ormTestCase(testcase_id = 5)
 
-# Boba = ormUser( user_name="Boba",
-#                user_birthday='10-10-2001',
-#                user_email='boba@gmail.com',
-#                user_studybook='KM2222',
-#                user_year='10-10-2010',
-#                )
-#
-#
-# Boban = ormUser( user_name="Boban",
-#                user_birthday='10-10-2001',
-#                user_email='boba@gmail.com',
-#                user_studybook='KM2222',
-#                user_year='10-10-2010',
-#                )
-#
-#
-# Biba = ormUser( user_name="Biba",
-#                user_birthday='10-10-2011',
-#                user_email='biba@gmail.com',
-#                user_studybook='KM3333',
-#                user_year='10-10-2017',
-#                )
-#
-#
-# Java = ormSkill(skill_name='Java')
-# Oracle = ormSkill(skill_name='Oracle')
-# Python = ormSkill(skill_name='Python')
-#
-# # create relations
-# Bob.orm_skills.append(Java)
-# Bob.orm_skills.append(Oracle)
-# Bob.orm_skills.append(Python)
-#
-# Boba.orm_skills.append(Java)
-#
-# Boban.orm_skills.append(Oracle)
-#
-# # insert into database
-db.session.add_all([Dima])
-#
+add.Function_TescCase.append(i_1)
+sub.Function_TescCase.append(i_2)
+mult.Function_TescCase.append(i_3)
+div.Function_TescCase.append(i_4)
+abs.Function_TescCase.append(i_5)
+
+p_0i_1_1 = ormParameters(parameters_index = 0,
+    testcase_iteration = 1,
+    parameters_value = 2)
+
+p_1i_1_2 = ormParameters(parameters_index = 1,
+    testcase_iteration = 1,
+    parameters_value = 3)
+
+p_0i_1_3 = ormParameters(parameters_index = 0,
+    testcase_iteration = 1,
+    parameters_value = 4)
+
+p_1i_1_4 = ormParameters(parameters_index = 1,
+    testcase_iteration = 1,
+    parameters_value = 5)
+
+p_0i_1_5 = ormParameters( parameters_index = 0,
+    testcase_iteration = 1,
+    parameters_value = -7)
+
+
+i_1.TestCase_Parameters.append(p_0i_1_1)
+i_1.TestCase_Parameters.append(p_1i_1_2)
+i_2.TestCase_Parameters.append(p_0i_1_3)
+i_2.TestCase_Parameters.append(p_1i_1_4)
+i_5.TestCase_Parameters.append(p_0i_1_5)
+
+
+iter_1 = ormResult(result_value = 5,
+                    testcase_iteration = 1)
+
+iter_2 = ormResult(result_value = -1,
+                    testcase_iteration = 1)
+
+iter_3 = ormResult(result_value = 4,
+                    testcase_iteration = 1)
+
+iter_4 = ormResult(result_value = 0.25,
+                    testcase_iteration = 1)
+
+iter_5 = ormResult(result_value = 7,
+                    testcase_iteration = 1)
+
+i_1.TestCase_Result.append(iter_1)
+i_2.TestCase_Result.append(iter_2)
+i_3.TestCase_Result.append(iter_3)
+i_4.TestCase_Result.append(iter_4)
+i_5.TestCase_Result.append(iter_5)
+
+
+db.session.add_all([Dima, Vlad, Vadim, Yarik, Srhey, add, sub, mult, div, abs, i_1, i_2, i_3, i_4, i_5,
+                    p_0i_1_1, p_1i_1_2, p_0i_1_3, p_1i_1_4, p_0i_1_5, iter_1, iter_2, iter_3, iter_4, iter_5])
+
 db.session.commit()
-# # db.subquery("orm_function").delete()
+
 
 
 
