@@ -8,8 +8,8 @@ db = SQLAlchemy(app)
 
 
 association_table = db.Table('association', db.metadata,
-                             db.Column('left_name', db.Integer, db.ForeignKey('event.event_name')),
-                             db.Column('right_name', db.String(20), db.ForeignKey('place.place_name'))
+                             db.Column('left_name', db.Integer, db.ForeignKey('event.event_name'), primary_key=True),
+                             db.Column('right_name', db.String(20), db.ForeignKey('place.place_name'), primary_key=True)
                              )
 
 
