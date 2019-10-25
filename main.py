@@ -40,6 +40,7 @@ class ormTestCase(db.Model):
     function_name_fk = db.Column(db.String(100), db.ForeignKey('orm_function.function_name'))
 
     TestCase_Parameters = db.relationship("ormParameters")
+    TestCase_Result = db.relationship("ormResult")
 
 
 class ormParameters(db.Model):
@@ -64,21 +65,78 @@ class ormResult(db.Model):
 db.create_all()
 
 
-# db.session.query(ormUserSkill).delete()
-# db.session.query(ormSkill).delete()
-# db.session.query(ormUser).delete()
+db.session.query(ormResult).delete()
+db.session.query(ormParameters).delete()
+db.session.query(ormTestCase).delete()
+db.session.query(ormFunction).delete()
+db.session.query(ormPersons).delete()
 
 
-#
-# Bob = ormUser( user_name="Bob",
-#                user_birthday='10-10-2000',
-#                user_email='bob@gmail.com',
-#                user_studybook='KM1111',
-#                user_year='10-09-2010',
-#                )
-#
-#
-#
+
+
+Dima = ormPersons(  person_login = "Dima",
+                person_password = "0000",
+                person_name = "Dima",
+                person_surname = "Koltsov",
+                person_email = "dik19994@gmail.com",
+                person_birthday = "1999-01-01")
+
+Vlad = ormPersons(  person_login = "Vlad",
+                person_password = "0000",
+                person_name = "Vlad",
+                person_surname = "Kanevckyi",
+                person_email = "vladkaneve@gmail.com",
+                person_birthday = "1999-02-04")
+
+Vadim = ormPersons(  person_login = "Vadim",
+                person_password = "0000",
+                person_name = "Vadim",
+                person_surname = "Pits",
+                person_email = None,
+                person_birthday = "1998-10-29")
+
+Yarik = ormPersons(  person_login = "Yarik",
+                person_password = "0000",
+                person_name = "Yarik",
+                person_surname = "Artemenko",
+                person_email = None,
+                person_birthday = "1999-08-11")
+
+Srhey = ormPersons(  person_login = "Srhey",
+                person_password = "0000",
+                person_name = "Srhey",
+                person_surname = "Gorodnuk",
+                person_email = None,
+                person_birthday = "1999-10-02")
+
+add = ormFunction( function_name = "add",
+                person_text = "def add(a, b):\n\treturn a+b",
+                counter_of_tests = 10)
+
+sub = ormFunction( function_name = "sub",
+                person_text = "def sub(a, b):\n\treturn a-b",
+                counter_of_tests = 10)
+
+mult = ormFunction( function_name = "mult",
+                person_text = "def mult(a, b):\n\treturn a*b",
+                counter_of_tests = 10)
+
+div = ormFunction( function_name = "div",
+                person_text = "def div(a, b):\n\treturn a/b",
+                counter_of_tests = 10)
+
+abs = ormFunction( function_name = "abs",
+                person_text = "def abs(a):\n\treturn abs(a)",
+                counter_of_tests = 10)
+
+
+Dima.Persons_Function.append(add)
+Vlad.Persons_Function.append(sub)
+Vadim.Persons_Function.append(mult)
+Yarik.Persons_Function.append(div)
+Srhey.Persons_Function.append(abs)
+
+
 # Boba = ormUser( user_name="Boba",
 #                user_birthday='10-10-2001',
 #                user_email='boba@gmail.com',
@@ -117,7 +175,7 @@ db.create_all()
 # Boban.orm_skills.append(Oracle)
 #
 # # insert into database
-# db.session.add_all([Java,Oracle,Python,Boban,Boba,Bob,Biba])
+db.session.add_all([Dima])
 #
 db.session.commit()
 # # db.subquery("orm_function").delete()
