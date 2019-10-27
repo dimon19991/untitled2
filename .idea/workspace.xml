@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7911d27c-3410-4f3e-9b23-7f1fda65b545" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-    </list>
+    <list default="true" id="7911d27c-3410-4f3e-9b23-7f1fda65b545" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="26" column="191" selection-start-line="26" selection-start-column="191" selection-end-line="26" selection-end-column="191" />
+            <state relative-caret-position="170">
+              <caret line="94" lean-forward="true" selection-start-line="89" selection-end-line="94" />
               <folding>
                 <element signature="e#0#68#0" expanded="true" />
               </folding>
@@ -314,7 +311,7 @@
       <workItem from="1572173466062" duration="12000" />
       <workItem from="1572173819047" duration="243000" />
       <workItem from="1572203803313" duration="1889000" />
-      <workItem from="1572207813720" duration="1167000" />
+      <workItem from="1572207813720" duration="1526000" />
     </task>
     <task id="LOCAL-00001" summary="connect">
       <created>1572002690367</created>
@@ -400,11 +397,18 @@
       <option name="project" value="LOCAL" />
       <updated>1572206482017</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="connect_1">
+      <created>1572210845081</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1572210845081</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60900000" />
+    <option name="totallyTimeSpent" value="61259000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -417,7 +421,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2774799" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -448,7 +451,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="connect" />
-    <MESSAGE value="connect_1" />
     <MESSAGE value="connect_2" />
     <MESSAGE value="connect_3" />
     <MESSAGE value="connect_4" />
@@ -456,7 +458,8 @@
     <MESSAGE value="connect_6" />
     <MESSAGE value="connect_7" />
     <MESSAGE value="connect_8" />
-    <option name="LAST_COMMIT_MESSAGE" value="connect_8" />
+    <MESSAGE value="connect_1" />
+    <option name="LAST_COMMIT_MESSAGE" value="connect_1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -687,8 +690,8 @@
     <entry file="file://$PROJECT_DIR$/.gitignore" />
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="26" column="191" selection-start-line="26" selection-start-column="191" selection-end-line="26" selection-end-column="191" />
+        <state relative-caret-position="170">
+          <caret line="94" lean-forward="true" selection-start-line="89" selection-end-line="94" />
           <folding>
             <element signature="e#0#68#0" expanded="true" />
           </folding>
