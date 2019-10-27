@@ -87,11 +87,11 @@ class ormResult(db.Model):
     testcase_id = db.Column(db.Integer, db.ForeignKey('orm_testcase.testcase_id'), primary_key=True)
 
 
-db.session.query(ormResult).delete()
-db.session.query(ormParameters).delete()
-db.session.query(ormTestCase).delete()
-db.session.query(ormFunction).delete()
-db.session.query(ormPersons).delete()
+# db.session.query(ormResult).delete()
+# db.session.query(ormParameters).delete()
+# db.session.query(ormTestCase).delete()
+# db.session.query(ormFunction).delete()
+# db.session.query(ormPersons).delete()
 
 @app.route('/', methods=['GET', 'POST'])
 def root():
