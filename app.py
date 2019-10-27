@@ -214,7 +214,7 @@ i_5.TestCase_Result.append(iter_5)
 db.session.add_all([Dima, Vlad, Vadim, Yarik, Srhey, add, sub, mult, div, abs, i_1, i_2, i_3, i_4, i_5,
                     p_0i_1_1, p_1i_1_2, p_0i_1_3, p_1i_1_4, p_0i_1_5, iter_1, iter_2, iter_3, iter_4, iter_5])
 
-
+db.session.commit()
 @app.route('/', methods=['GET', 'POST'])
 def root():
     return render_template('index.html')
